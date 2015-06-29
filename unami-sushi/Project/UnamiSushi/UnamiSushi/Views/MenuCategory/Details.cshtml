@@ -1,0 +1,87 @@
+﻿<div style="visibility: visible;">
+    <section>
+        @if (Model != null)
+        {
+            <h2 class="section-heading" style="float: left; font-family: Kaushan Script,Helvetica Neue,Helvetica,Arial,cursive; color:limegreen;">@Model.CategoryName</h2>
+            <h4 class="section-heading" style="float: right; padding-right: 30px; color:black;"><img src="@Url.Content("~/Content/VegetarianSymbol.png")" class="foodIcon" alt="Vegetarian">= Raw</h4>
+            <h4 class="section-heading" style="float: right; padding-right: 30px; color:black;"><img src="@Url.Content("~/Content/VegetarianSymbol.png")" class="foodIcon" alt="Vegetarian">= Vegetarian</h4>
+
+            <br />
+            <br />
+            <br />
+            <br />
+
+            foreach (var subCat in Model.Subcategories)
+            {
+                <div class="grid" style="padding-top: 5px;">
+                    <table cellspacing=" 0" width="100%">
+                        <thead>
+                            <tr>
+                                <th style="width: 250px;">
+                                    @subCat.SubcategoryName
+                                </th>
+                                <th style="width: 180px;">
+                                    Name
+                                </th>
+                                <th>
+                                    @*Spacing for symbols*@
+                                </th>
+                                <th style="width: 600px;">
+                                    Description
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var menuItem in subCat.MenuItems)
+                            {
+                                <tr>
+
+                                    <td align="left">
+
+                                        @{
+                                string imageString;
+
+                                if (menuItem.MenuPictures.Count > 0)
+                                {
+                                    var menuPictures = (ICollection<UnamiSushi.Models.MenuPicture>)menuItem.MenuPictures;
+                                    imageString = menuPictures.FirstOrDefault().ThumbnailPathname;
+                                }
+                                else
+                                { imageString = "/Photos/Normal/MissingThumb.PNG"; }
+
+
+                                <a href="@Url.Action("Details", "MenuItem", new { id = menuItem.MenuItemID })">
+                                    <img src="@Url.Content(imageString)" alt="image" width="200" height="150" style="padding-bottom: 10px;border-radius:25px;" />
+                                </a>
+
+
+                                        }
+                                    </td>
+
+                                    <td data-title="Name" align="left">
+                                        @*@Html.ActionLink(menuItem.MenuItemName, "Details", "MenuItem", new { id = menuItem.MenuItemID }, null)*@
+
+                                        <a href="@Url.Action("Details", "MenuItem", new { id = menuItem.MenuItemID })">
+                                            @menuItem.MenuItemName
+                                        </a>
+                                    </td>
+
+                                    <td>
+                                        @if (menuItem.Vegetarian == true)
+                                        {
+                                            <img src="@Url.Content("~/Content/VegetarianSymbol.png")" class="foodIcon" alt="Vegetarian">
+                                        }
+                                    </td>
+
+                                    <td title="Description" align="left">
+                                        @menuItem.MenuItemDescription
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            }
+        }
+    </section>
+</div>

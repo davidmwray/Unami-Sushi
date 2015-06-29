@@ -1,0 +1,39 @@
+﻿@model IEnumerable<UnamiSushi.Models.MenuCategory>
+@*@Model UnamiSushi.Models.MenuCategory*@
+
+@{
+    ViewBag.Title = "Menu Page";
+    Layout = "~/Views/Shared/Menu_Layout.cshtml";
+}
+
+@using UnamiSushi.Models
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body id="page-top" class="index">
+    <header class="menuheader">
+        <div class="container">
+            <div class="intro-text">
+                <div class="intro-lead-in">Welcome To Our Menu!</div>
+                @*<div class="intro-heading">Try Our Sushi Burrito!</div>
+                <a href="#sushido" class="page-scroll btn btn-xl">Tell Me More!</a>*@
+            </div>
+        </div>
+    </header>
+
+    @foreach (var item in Model)
+    {
+        <section id="@item.CategoryName">
+            <div class="container" style="padding-right:45px;">
+
+                <div style="visibility: hidden;">
+                    @{Html.RenderAction("CategoryPartialDetails", new { id = item.CategoryID });}
+                </div>
+
+            </div>
+        </section>
+    }
+</body>
+</html>

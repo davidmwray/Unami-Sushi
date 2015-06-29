@@ -1,0 +1,49 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Unami Sushi - Administrative Controls</title>
+</head>
+<body>
+    <section> 
+
+        <table>
+            <tr>
+                <td>Menu Categories</td>
+                <td>@Html.ActionLink("Index", "Index", "MenuCategory")</td>
+            </tr>
+            <tr>
+                <td>Sub Categories</td>
+                <td>@Html.ActionLink("Index", "Index", "SubCategory")</td>
+            </tr>
+            <tr>
+                <td>Menu Items</td>
+                <td>@Html.ActionLink("Index", "Index", "MenuItem")</td>
+            </tr>
+            <tr>
+                <td>Menu Pictures</td>
+                <td>@Html.ActionLink("Index", "Index", "MenuPicture")</td>
+            </tr>
+            <tr>
+                
+                <td>@Html.ActionLink("Create Role", "Create", "Role")</td>
+            </tr>
+            <tr>
+
+                <td>@Html.ActionLink("Register User", "Register", "Account")</td>
+            </tr>
+            <tr>
+
+                <td>@Html.ActionLink("Return To Home", "Index", "Home")</td>
+            </tr>
+        </table>
+
+    </section>
+</body>
+</html>

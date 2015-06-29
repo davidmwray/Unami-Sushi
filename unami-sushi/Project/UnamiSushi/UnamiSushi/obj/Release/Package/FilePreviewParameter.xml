@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="unamisushi" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\waffles\\Documents\\GitHub\\CS297N-Capstone\\Project\\UnamiSushi\\UnamiSushi\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Users\\waffles\\Documents\\GitHub\\CS297N-Capstone\\Project\\UnamiSushi\\UnamiSushi\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="PrimaryContext-Web.config Connection String" description="" value="Data Source=tcp:cyn6ait4vq.database.windows.net,1433;Initial Catalog=UnamiSushiDB;User Id=unamisushi@cyn6ait4vq;Password=unami2015+" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\waffles\\Documents\\GitHub\\CS297N-Capstone\\Project\\UnamiSushi\\UnamiSushi\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='PrimaryContext']/@connectionString" />
+  </parameter>
+</parameters>

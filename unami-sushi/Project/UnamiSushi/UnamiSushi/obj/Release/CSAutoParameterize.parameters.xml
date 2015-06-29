@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="PrimaryContext-Web.config Connection String" description="PrimaryContext Connection String used in web.config by the application to access the database." defaultValue="Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\MenuDatabase2.mdf;Initial Catalog=MenuDatabase2;Integrated Security=True;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\waffles\\Documents\\GitHub\\CS297N-Capstone\\Project\\UnamiSushi\\UnamiSushi\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='PrimaryContext']/@connectionString" />
+  </parameter>
+</parameters>

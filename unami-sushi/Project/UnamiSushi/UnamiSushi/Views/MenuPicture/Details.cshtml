@@ -1,0 +1,50 @@
+﻿@model UnamiSushi.Models.MenuPicture
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>View</title>
+</head>
+<body>
+    <div>
+        <h4>MenuPicture</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.MenuItemID)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.MenuItemID)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.PicturePathname)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.PicturePathname)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.ThumbnailPathname)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.ThumbnailPathname)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.PictureID }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

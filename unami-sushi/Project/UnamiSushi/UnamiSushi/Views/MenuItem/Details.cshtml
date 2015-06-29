@@ -1,0 +1,68 @@
+﻿@model UnamiSushi.Models.MenuItem
+
+@{
+    ViewBag.Title = Model.MenuItemName;
+    Layout = "~/Views/Shared/Standard_Layout.cshtml";
+
+    string imageString;
+        
+    if(Model.MenuPictures.Count > 0)
+        { imageString = Model.MenuPictures.FirstOrDefault().PicturePathname; }
+        else
+        { imageString = "/Photos/Normal/MissingPic.PNG"; }
+}
+
+<section>
+    <div class="container">
+        <div class="col-md-9">
+            <img src="@Url.Content(imageString)" alt="image" width="800" height="600" style="border-radius:50px;"/>
+            </div>
+            @*<dl class="dl-horizontal">
+
+                @Html.DisplayFor(model => model.MenuItemName)
+
+                @Html.DisplayFor(model => model.MenuItemDescription)
+
+                @Html.DisplayFor(model => model.MenuItemPrice)
+
+                @foreach (var comment in Model.ItemComments)
+                {
+                    @Html.DisplayFor(item => comment.UserID)
+                    @Html.DisplayFor(item => comment.CommentDate)
+                    @Html.DisplayFor(item => comment.CommentContents)
+                }
+
+            </dl>*@
+        <div class="col-md-3">
+            <table cellspacing=" 0" width="100%">
+
+                <thead>
+
+                    <tr>
+                        <th style="width: 250px;">
+                            @Html.DisplayFor(model => model.MenuItemName)
+                        </th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+
+                    <tr>
+
+                        <td title="Description" align="left">
+                            @Html.DisplayFor(model => model.MenuItemDescription)
+                            <h4 class="service-heading">@Html.ActionLink("Back To Menu", "Menu", "Home", null, null, "Sushi-Burritos", null, null)</h4>
+                        </td>
+
+                    </tr>
+
+                </tbody>
+            </table>
+            </div>
+        </div>
+</section>
+<p>
+
+</p>

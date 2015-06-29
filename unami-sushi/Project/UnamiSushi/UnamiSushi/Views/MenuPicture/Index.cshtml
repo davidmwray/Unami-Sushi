@@ -1,0 +1,60 @@
+﻿@model IEnumerable<UnamiSushi.Models.MenuPicture>
+
+@{
+    Layout = null;
+}
+
+<h2>MenuPicture Index</h2>
+
+@Html.ActionLink("Back to Master Index", "Admin", "Home")
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PictureID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MenuItemID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PicturePathname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ThumbnailPathname)
+        </th>
+        <th>
+            Thumbnail
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PictureID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MenuItemID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PicturePathname)
+            
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ThumbnailPathname)
+        </td>
+        <td>
+            <img src="@Url.Content(item.PicturePathname)" height="150" width="200" />
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.PictureID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PictureID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PictureID })
+        </td>
+    </tr>
+}
+
+</table>

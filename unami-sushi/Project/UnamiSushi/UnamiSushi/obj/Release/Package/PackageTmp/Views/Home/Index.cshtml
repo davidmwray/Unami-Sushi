@@ -1,0 +1,215 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/Home_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        ul.social-buttons li a.contactbutton {
+        -ms-transform: scale(2,2); 
+        -webkit-transform: scale(2,2);
+        transform: scale(2,2);}
+
+        p {
+            text-align:justify;
+            
+        }
+
+        img.aboutus {
+            border-radius:40px;
+            width:330px; 
+            height:248px;
+        }
+        
+        img.menu {
+            width: 100%;
+            height:auto;
+        }
+    </style>
+    
+    <title> @ViewBag.Title </title>
+</head>
+
+<body id="page-top" class="index">
+
+    <header>
+        <div class="container">
+            <div class="intro-text">
+                <div class="intro-lead-in">Welcome To Unami Sushi!</div>
+                <div class="intro-heading">Try Our Sushi Burrito!</div>
+                <a href="#sushido" class="page-scroll btn btn-xl">Tell Me More!</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="sushido" style="border-bottom: 2px solid black">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Sushi Burritos</h2>
+                    @*<h3 class="section-subheading text-muted">WIP!: This is a section about our sushi burritos</h3>*@
+                    <div class="col-md-9" style="padding-right:30px; padding-left:0px;">
+                        <img src="~/Photos/normal/sushido.jpg" class="menu" style="border-radius:40px;margin-right: 30px;" width="800" height="600" alt="Sushi Burrito Pic" />
+                    </div>
+                    <div class="col-md-3">
+                        <p style="padding-right:15px;">
+                            If you've heard only one thing about our food here at Unami Sushi, it's probably about our Sushi Burritos.
+                            Our menu gives you a large variety of choices, from the savory #Bacon, to the sweeter Caterpillar, or even our spicy M-80.
+                            All with the freshest ingredients and wrapped up for your personal enjoyment, try one today and see what we're all about here at Unami.
+                        </p>
+                    </div>
+                            <h4 class="service-heading">@Html.ActionLink("Sushi Burritos", "Menu", "Home", null, null, "Sushi-Burritos", null, null)</h4>
+                        </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="menu" style="border-bottom: 2px solid black">
+        <div class="container">
+            <div class="row">
+                <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Menu</h2>
+                    <h3 class="section-subheading text-muted">Take a look at our wide selection of delicious food</h3>
+                </div>
+            </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <img src="~/Photos/normal/wolverineroll.jpg" class="menu" style="width:330px; height:248px; border-radius:40px;" alt="Wolverine Roll">
+                    <h4 class="service-heading">@Html.ActionLink("Sushi", "Menu", "Home", null, null, "Sushi-Rolls", null, null)</h4>
+                    <p class="text-muted">We wouldn't be Unami Sushi without it! Take a look at our menu of sushi rolls.</p>
+                </div>
+                <div class="col-md-4">
+                        <img src="~/Photos/normal/gingerpokesalad.jpg" class="menu" style="width:330px; height:248px; border-radius:40px;" alt="Ginger Poke Salad">
+                    <h4 class=" service-heading">@Html.ActionLink("Appetizers", "Menu", "Home", null, null, "Appetizers", null, null)</h4>
+                    <p class="text-muted">Looking for a nice starter or something to share? See our greate appetizers!</p>
+                </div>
+                <div class="col-md-4">
+                    <img src="~/Photos/normal/shrimpstirfry.jpg" class="menu" style="width:330px; height:248px; border-radius:40px;" alt="Shrimp Stir Fry">
+                    <h4 class="service-heading">@Html.ActionLink("Asian Grill", "Menu", "Home", null, null, "Asian-Grill", null, null)</h4>
+                    <p class="text-muted">Our traditional asian grill items will have you wishing you could just that last bite more.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="aboutus" style="border-bottom: 2px solid black">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">The Origin of Unami Sushi</h2>
+                    <h3 class="section-subheading text-muted">A story from the owner . . . Toby</h3>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <img src="~/Photos/normal/tobes.jpg" class="aboutus"/>
+                         
+                 <p>
+                     <br /> 
+                    I'm originally from Oregon, born in Lebanon, and grew up in Portland. We moved to Missoula Montana when I was 10 years old. After 7th grade I was homeschooled
+                    from which I graduated when I was 16. 
+                 </p>
+                 <p>
+                    I got my first restaurant job at the Montana Club, a large restaurant that grossed close to 10 million per year. There, I
+                    worked my way up from a dishwasher to running the line. While working at the Montana Club, I learned how to prepare many different types of cuisine from scratch,
+                    including French, Italian, Asian, American, and Spanish cuisines. With extra time in my schedule from having finished high school early, I got 2nd jobs at other
+                    restaurants in 2-3 month intervals and worked 70-80 hours
+                </p>
+            </div>
+            <div class="col-md-4">
+                <p>
+                    a week just to learn more.   Originally planning on
+                    working at restaurants through college and just to
+                    have the life skill to cook, I really had no idea I would be this interested in the craft.
+                </p>
+                <p>
+                    I quickly soaked up as much information as I could about different types
+                    and styles of cooking. Soon I realized, the one I became most interested in was japanese style cooking and the sushi world. It seemed so exotic and I had never
+                    even eaten sushi so I knew nothing about it, and that is what intrigued me so much. So I went and applied at a sushi restaurant in Missoula that was just
+                    reopening. When I landed the job as a sushi chef in training I had no idea how much it would transform my life.
+                </p>
+                <p>
+                    Credit due to the owner, Sung Won Kim, he was a
+                    great teacher and he knew so much. He was born in Korea and learned how to make sushi in Japan, then moved to America and worked at sushi restaurants in
+                    California before opening his own 5 table restaurants in the bay area. He then opened a restaurant in Northern California and after much success decided to open a
+                    place in Montana where he wanted to retire. He opened Sushi Hana which was the first sushi restaurant in Montana in 1998. After family disputes he reopened the
+                    place 5 years later as 
+                </p>
+            </div>
+            <div class="col-md-4">
+                <p>
+                    Nara Korean BBQ and Sushi where I got a job when it first opened.
+                <p>
+                    Working there and learning the craft for 5 years I opened my own sushi
+                    restaurant, 2nd Street Sushi, 50 miles south in a town called Hamilton. Lots of experimentation with fine dining types of food and business experience under my
+                    belt, I was ready to move back to Oregon so I sold the sushi restaurant and moved to Eugene & Springfield area where my mom resides.
+                </p>
+                <p>    
+                    We knew there was a nich in quick
+                    service sushi because other than the conveyerbelt places, they really didnt exist to my knowledge yet. So Abby sugessted we try opening a drive thru and figure
+                    things out. Thats where we developed the Sushi Burrito concept in our style based on reditions of previous rolls I had created at 2nd Street Sushi. My dream is
+                    to open a chain of Sushi Burrito shops that focus on sustainability and use of ingredients found locally, while providing a workplace that promotes individuality
+                    and a sense of pride for serving healthy delicious alternative to traditional "fast Food".
+                    <br/>
+                    <br/>
+                    <br />
+                    - Toby Helm, Owner of Unami Sushi
+                </p>
+            </div>
+        </div>
+</section>
+
+    <section id="contactus">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Contact Us</h2>
+                    <h3 class="section-subheading text-muted" style="margin-bottom:15px;">Enjoy your meal? Like us on Facebook, friend us on google+ and give us a review on Yelp!</h3>
+                    
+                    <h3 class="section-subheading text-muted" style="margin-bottom:15px;">Tue - Fri 11:00AM - 9:00PM<br/>
+                                                              Sat 12:00PM - 9:00PM<br/>
+                                                              CLOSED Sun - Mon</h3>
+                    
+                    <h4 class="section-subheading text-muted" style="margin-bottom:25px;">Phone: 541-505-8962<br />
+                        <br />
+                                                                                          4205 Main St<br />Springfield, Oregon 97478</h4>
+                  
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-5">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2867.8668906578364!2d-122.96272399999997!3d44.044805000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54c0e09298197f29%3A0x22ed37bf2bb80180!2sUnami!5e0!3m2!1sen!2sus!4v1433109653033" width="400" height="300" frameborder="0" style="border: 2px solid black;"></iframe>
+                </div>
+                <div class="col-md-3" style="padding-left:45px; padding-right:45px; padding-bottom:30px;">
+                    
+                        <ul class="list-inline social-buttons">
+                            <li>
+                                <a href="https://www.facebook.com/pages/Unami-Sushi-Asian-Grill/194341314056531" class="contactbutton"><i class="fa fa-facebook"></i></a>
+                            </li>
+                        </ul>
+                    <ul class="list-inline social-buttons">
+                        <li>
+                            <a href="https://plus.google.com/112471840451352098026/about?gl=us&hl=en" class="contactbutton"><i class="fa fa-google-plus"></i></a>
+                        </li>
+                    </ul>
+                    <ul class="list-inline social-buttons">
+                        <li>
+                            <a href="http://www.yelp.com/biz/unami-springfield" class="contactbutton"><i class="fa fa-yelp"></i></a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="yelp" id="yelpwidget" style="border: 2px solid black;"></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</body>
+</html>
+<script>(function() { var s = document.createElement("script");s.async = true;s.onload = s.onreadystatechange = function(){getYelpWidget("unami-springfield","300","WHT","y","y","1");};s.src='http://chrisawren.com/widgets/yelp/yelpv2.js' ;var x = document.getElementsByTagName('script')[0];x.parentNode.insertBefore(s, x);})();</script>
